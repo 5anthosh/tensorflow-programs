@@ -65,7 +65,7 @@ b_2 = tf.Variable(
     name="bias_layer_1"
 )
 z_1 = tf.matmul(X, W_1) + b_1
-a_1 = tf.nn.relu(z_1, name="linear_Activation")
+a_1 = tf.nn.relu(z_1, name="non_linear_Activation_function")
 z_2 = tf.matmul(a_1, W_2) + b_2
 output = tf.nn.softmax(z_2)
 cost = tf.reduce_mean(
