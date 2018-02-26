@@ -46,7 +46,7 @@ class LinearRegression:
         self.X = x
         self.Y = y.reshape((-1, 1))
         self.w = np.random.rand(x.shape[-1], 1)
-        self.use_bias = True
+        self.use_bias = use_bias
         self.m = x.shape[0]
         self.lamda = lamda
         self.iteration = epochs
