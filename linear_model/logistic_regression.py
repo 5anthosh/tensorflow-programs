@@ -29,7 +29,7 @@ class LogisticRegression:
 
     def _compute_gradient(self, z):
         dw = (1/self.m)*np.dot(self.X.T, (z - self.Y)) + (self.lamda/self.m)*self.w
-        db = (1/self.m)*np.sum(np.dot(self.X.T, (z - self.Y)))
+        db = (1/self.m)*np.sum((z - self.Y))
         return dw, db
 
     def _update_parameters(self):
